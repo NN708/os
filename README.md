@@ -43,6 +43,17 @@ docker run --rm --privileged -it \
     ./build.sh etc/terraform.conf
 ```
 
+### M Series Macs
+
+```sh
+docker run --rm --privileged -it \
+  -v /proc:/proc \
+  -v "$PWD:/working_dir" \
+  -w /working_dir \
+  debian:sid \
+  ./build.sh etc/terraform-arm64.conf
+```
+
 ### Raspberry Pi 4
 
 ```sh
